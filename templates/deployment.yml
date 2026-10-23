@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: {{ .Values.axionui.name }}
-  replicas: 200
+  replicas: 50
   template:
     metadata:
       labels:
