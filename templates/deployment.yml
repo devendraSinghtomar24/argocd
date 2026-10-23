@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.axionui.name }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.axionui.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.axionui.name }}
+    spec:
+      containers:
+      - name: {{ .Values.axionui.name }}
+        image: "{{ .Values.axionui.acrname }}/{{ .Values.axionui.image_name }}:{{ .Values.axionui.tag }}"
+        ports:
+        - containerPort: {{ .Values.axionui.containerPort }}

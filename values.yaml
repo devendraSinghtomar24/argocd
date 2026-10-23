@@ -1,0 +1,11 @@
+axionui:
+  name: axion-ui
+  acrname: "9548405387"
+  image_name: axion-ui
+  tag: v3
+  containerPort: 80
+  # Service name for the axion-ui deployment
+  svcname: axion-ui-svc
+  servicetype: ClusterIP
+  ingress_name: axion-ingress
+  className: azure-application-gateway
